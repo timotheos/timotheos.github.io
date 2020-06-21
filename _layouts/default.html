@@ -1,45 +1,22 @@
 <!DOCTYPE html>
-<html class="h-100">
-  <head>
-    <!-- Bootstrap -->
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-mhpbKVUOPCSocLzx2ElRISIORFRwr1ZbO9bAlowgM5kO7hnpRBe+brVj8NNPUiFs" crossorigin="anonymous">
-    <title>{{ page.title }}</title>
-  </head>
-  <body class="d-flex flex-row h-100">
-    <div class="text-right w-25 ">
-      <nav class="navbar navbar-expand navbar-dark bg-primary">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<html lang="en" class="h-100">
+  
+  {% include head.html %}
 
-        <div class="collapse navbar-collapse justify-content-end" id="sidebar">
-          
-          <ul class="navbar-nav flex-column">
-            <a class="navbar-brand active mb-0 h1" href="/">Tim Pua </a>
-            <li class="nav-item">
-              <a class="nav-link" href="/research">CV</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/thoughts">Blog</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+  <body class="d-flex flex-row h-100">
+    
+    {% include header.html %}
+    
     <div class="container">
+      
       <main role="main" >
-        {{ content  }}
+        {{ content }}
       </main>
-      <footer class="footer py-3">
-        <div class="container">
-          <span>
-              <a href="https://github.com/timotheos">github.com/timotheos</a>
-          </span>
-        </div>
-      </footer>
+      
+      {% include footer.html %}
+    
     </div>
+  
+  {% include scripts.html %}
   </body>
 </html>
